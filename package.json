@@ -3,18 +3,34 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "flow": "flow",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^1.9.1",
+    "@stripe/react-stripe-js": "^1.10.0",
+    "@stripe/stripe-js": "^1.35.0",
+    "flow": "^0.2.3",
+    "framer-motion": "^7.2.1",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.3.0",
+    "react-icons": "^4.4.0",
+    "stripe": "^10.7.0",
+    "styled-components": "^5.3.5",
+    "urql": "^2.2.3"
   },
   "devDependencies": {
-    "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5"
+    "@next/eslint-plugin-next": "^12.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-config-next": "12.2.5",
+    "eslint-plugin-react": "^7.30.1",
+    "flow-bin": "^0.185.0"
   }
 }
