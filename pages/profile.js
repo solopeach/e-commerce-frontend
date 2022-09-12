@@ -13,6 +13,7 @@ import formatMoney from "../lib/formatMoney";
 export const getServerSideProps = withPageAuthRequired({
   async getServerSideProps(ctx) {
     const session = getSession(ctx.req, ctx.res);
+    // eslint-disable-next-line no-undef
     const stripeId = session.user[`${process.env.BASE_URL}/stripe_customer_id`];
     // just the localhost:3000/stripe_customer_id url
     const paymentIntents = await stripe.paymentIntents.list({
