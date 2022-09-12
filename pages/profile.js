@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
+// eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
 const stripe = require("stripe")(
+  // eslint-disable-next-line no-undef
   `${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`
 );
 import { withPageAuthRequired, getSession } from "@auth0/nextjs-auth0";
@@ -30,7 +32,7 @@ export default function Profile({ user, orders }) {
         <p>{user.email}</p>
         <div>
           {orders.map((order) => (
-            <Order>
+            <Order key={order.id}>
               <h1>Order Number: {order.id}</h1>
               <h2>{formatMoney(order.amount)}</h2>
               <h2>Receipt Email: {user.email}</h2>
