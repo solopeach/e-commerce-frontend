@@ -27,7 +27,6 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Hello NExt</h1>
         <Gallery>
           {products.map((product) => (
             // slug thing fixes each child in a list should have a unique key prop error
